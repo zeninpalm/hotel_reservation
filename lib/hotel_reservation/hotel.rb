@@ -7,6 +7,24 @@ module HotelReservation
     end
 
     def initialize(namer, ratinger)
+      @namer = namer
+      @ratinger = ratinger
+    end
+
+    def name
+      @namer.name
+    end
+
+    def name=(v)
+      @namer.name = v
+    end
+
+    def rating
+      @ratinger.rating
+    end
+
+    def rating=(v)
+      @ratinger.rating = v
     end
   end
 end
