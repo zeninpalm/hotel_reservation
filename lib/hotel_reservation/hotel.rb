@@ -1,6 +1,7 @@
 module HotelReservation
   class Hotel
     private_class_method :new
+    attr_accessor :rates_policy
 
     def self.build(namer, ratinger)
       new(namer, ratinger)

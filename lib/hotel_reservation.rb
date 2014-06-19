@@ -14,4 +14,7 @@ require 'hotel_reservation/applicability_filter.rb'
 require 'hotel_reservation/applicability_filter_factory.rb'
 require 'hotel_reservation/hotel_date.rb'
 require 'hotel_reservation/rates_policy.rb'
+require 'hotel_reservation/sum_rates_use_case'
+require 'hotel_reservation/sum_rates_request'
+require 'hotel_reservation/find_hotel_request'
 

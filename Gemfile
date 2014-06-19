@@ -1,11 +1,11 @@
-source "https://rubygems.org"
+source "https://ruby.taobao.org"
 
 gemspec
 gem "rake"
 
 group :test do
   gem "rspec", "~> 2.13"
-
-    gem "guard-rspec"
-    gem "rb-fsevent"
+  gem "factory_girl"
+  gem "guard-rspec"
+  gem "rb-fsevent"
 end
