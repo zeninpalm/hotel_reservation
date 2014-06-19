@@ -1,11 +1,9 @@
 module HotelReservation
-  class Rates
-    def initialize(&block)
-      @filter = block
-    end
+  class USDollarRates
+    attr_accessor :value
 
-    def applicable?(user, date)
-      @filter.call(user, date)
+    def initialize(value)
+      @value = value
     end
   end
 end
