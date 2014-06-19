@@ -11,7 +11,7 @@ module HotelReservation
     def apply(user, date)
       @entries.each do |entry|
         if entry[0].matched?(user, date)
-          return entry[1].value
+          return entry[1]
         end
       end
     end
