@@ -2,8 +2,8 @@ module HotelReservation
   class Ratinger
     attr_accessor :rating
 
-    def initialize(rating)
-      @rating = rating
+    def initialize(rank)
+      @rating = rank
     end
   end
 end
