@@ -1,5 +1,5 @@
 module HotelReservation
-  class IntegerRating
+  class IntegerRank
     attr_accessor :value
 
     def initialize(value)
