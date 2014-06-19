@@ -3,4 +3,6 @@ require 'hotel_reservation/namer'
 require 'hotel_reservation/ratinger'
 require 'hotel_reservation/integer_rank'
 require 'hotel_reservation/set_rates_use_case'
-
+require 'hotel_reservation/set_rates_use_case_request'
+require 'hotel_reservation/regular_customer'
+require 'hotel_reservation/rewarded_customer'
