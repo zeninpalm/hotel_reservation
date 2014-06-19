@@ -1,5 +1,5 @@
 module HotelReservation
-  class SetUseCase
+  class SetRatesUseCase
 
     def executes(request)
     end
