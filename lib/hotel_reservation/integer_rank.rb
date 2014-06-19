@@ -5,5 +5,9 @@ module HotelReservation
     def initialize(value)
       @value = value.to_int
     end
+
+    def <(other)
+      @value < other.value
+    end
   end
 end

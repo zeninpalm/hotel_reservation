@@ -17,4 +17,5 @@ require 'hotel_reservation/rates_policy.rb'
 require 'hotel_reservation/sum_rates_use_case'
 require 'hotel_reservation/sum_rates_request'
 require 'hotel_reservation/find_hotel_request'
+require 'hotel_reservation/find_hotel_use_case'
 

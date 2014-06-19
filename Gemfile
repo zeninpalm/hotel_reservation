@@ -6,6 +6,4 @@ gem "rake"
 group :test do
   gem "rspec", "~> 2.13"
   gem "factory_girl"
-  gem "guard-rspec"
-  gem "rb-fsevent"
 end
