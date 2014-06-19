@@ -8,3 +8,8 @@ require 'hotel_reservation/regular_customer'
 require 'hotel_reservation/rewarded_customer'
 require 'hotel_reservation/regular_customer_factory'
 require 'hotel_reservation/rewarded_customer_factory'
+require 'hotel_reservation/rates.rb'
+require 'hotel_reservation/rates_factory.rb'
+require 'hotel_reservation/applicability_filter.rb'
+require 'hotel_reservation/hotel_date.rb'
+
