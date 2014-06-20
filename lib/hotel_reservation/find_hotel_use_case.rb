@@ -1,10 +1,7 @@
 module HotelReservation
   class FindHotelUseCase
-    def initialize
-      @cheapest = nil
-    end
-
     def executes(request)
+      @cheapest = nil
       extract_values(request)
       @hotels.each do |hotel|
         sum = sum_rates(hotel)

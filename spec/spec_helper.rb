@@ -8,9 +8,9 @@ end
 
 require "hotel_reservation"
 require "rspec"
-require 'helpers'
+#require 'helpers'
 
 RSpec.configure do |c|
-  c.include Helpers
+  c.include HotelReservation::Helpers
 end
 

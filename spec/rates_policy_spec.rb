@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe HotelReservation::RatesPolicy do
   let!(:policy) { make_rates_policy(us_dollar(100), us_dollar(190), us_dollar(320), us_dollar(170)) }
-  let!(:rewarded_customer) { make_customer("REWARDED") }
+  let!(:rewarded_customer) { make_customer("REWARDS") }
   let!(:regular_customer) { make_customer("REGULAR") }
 
   it "returns corresponding rates when filter matched" do

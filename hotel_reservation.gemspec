@@ -3,7 +3,7 @@ require "./lib/hotel_reservation/version"
 Gem::Specification.new do |s|
   s.name = "hotel_reservation"
   s.version = HotelReservation::VERSION
-  #s.executables << 'hotel_'
+  s.executables << 'hotel_reservation'
   s.platform = Gem::Platform::RUBY
   s.authors = ["Yi Wei"]
   s.email = ["yiwei.in.cyber@gmail.com"]

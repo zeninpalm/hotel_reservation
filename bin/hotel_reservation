@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+require 'hotel_reservation'
+
+class Driver
+  include HotelReservation::Helpers
+
+  HOTELS = [
+    {name: 'Lakewood', rating: 3, rates: [80, 80, 90, 110]},
+    {name: 'Bridgewood', rating: 4, rates: [50, 110, 60, 160]},
+    {name: 'Ridgewood', rating: 5, rates: [40, 100, 150, 220]}
+  ]
+
+  def initialize(input)
+    @input = input
+    @set_rates_use_case = make_set_rates_use_case
+    @find_hotel_use_case = make_find_hotel_use_case
+    @hotels = []
+    @command_parser = HotelReservation::CommandLineParser.new
+  end
+
+  def run
+    set_up_hotels
+    while @input.gets
+      command_line = $_
+      parse_command(command_line)
+      rates, hotel = execute_query
+      puts "#{hotel.name}"
+    end
+  end
+
+  private
+  def set_up_hotels
+    HOTELS.each do |hotel|
+      set_up_hotel(hotel)
+    end
+  end
+
+  def set_up_hotel(hotel)
+    the_hotel = make_hotel(hotel[:name], hotel[:rating])
+    rates = hotel[:rates]
+    policy = make_rates_policy(
+      us_dollar(rates[0]), us_dollar(rates[1]), us_dollar(rates[2]), us_dollar(rates[3]))
+    set_rates_request = make_set_rates_request(the_hotel, policy)
+    @set_rates_use_case.executes(set_rates_request) 
+    @hotels << the_hotel
+  end
+
+  def parse_command(command)
+    @command_parser.parse(command)
+  end
+
+  def execute_query
+    customer = make_customer(@command_parser.customer_type)
+    dates = @command_parser.dates
+    request = make_find_hotel_request(customer, dates, @hotels, us_dollar(0))
+    cheapest = @find_hotel_use_case.executes(request)
+  end
+end
+
+
+if ARGV.length == 0
+  d = Driver.new($stdin)
+  d.run
+else
+  puts "You must run this program interactively"
+end
+
+

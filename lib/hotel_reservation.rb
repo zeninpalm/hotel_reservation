@@ -16,6 +16,7 @@ require 'hotel_reservation/sum_rates_use_case'
 require 'hotel_reservation/sum_rates_request'
 require 'hotel_reservation/find_hotel_request'
 require 'hotel_reservation/find_hotel_use_case'
-require 'hotel_reservation/query_controller.rb'
-
+require 'hotel_reservation/query_controller'
+require 'hotel_reservation/command_line_parser'
+require 'hotel_reservation/helpers'
 

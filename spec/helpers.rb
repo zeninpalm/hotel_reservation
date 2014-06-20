@@ -34,7 +34,7 @@ module Helpers
   end
   
   def make_customer(type)
-    if type == "REWARDED"
+    if type == "REWARDS"
       HotelReservation::RewardedCustomer.new
     elsif type == "REGULAR"
       HotelReservation::RegularCustomer.new
