@@ -11,7 +11,7 @@ describe HotelReservation::ApplicabilityFilter do
     end
   end
   context "filtering" do
-    let(:regular_user) { HotelReservation::RegularCustomerFactory.make }
+    let(:regular_user) { make_customer("REGULAR") }
     let(:weekend) { HotelReservation::HotelDate.parse("2014-6-15") }
     
     it "matches regular user on weekend" do

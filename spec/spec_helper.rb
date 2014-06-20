@@ -8,3 +8,10 @@ end
 
 require "hotel_reservation"
 require "rspec"
+require 'factory_girl'
+require 'helpers'
+
+RSpec.configure do |c|
+  c.include Helpers
+end
+

@@ -4,10 +4,10 @@ module HotelReservation
       dates = request.dates
       user = request.user
       policy = request.rates_policy
-      sum = 0
+      sum = request.initial.dup
 
       dates.each do |date|
-        sum += policy.apply(user, date).value
+        sum.value += policy.apply(user, date).value
       end
       sum
     end

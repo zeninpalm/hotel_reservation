@@ -14,6 +14,10 @@ module HotelReservation
           return entry[1]
         end
       end
+      raise NoFilterApplicableError
+    end
+
+    class NoFilterApplicableError < RuntimeError
     end
   end
 end
