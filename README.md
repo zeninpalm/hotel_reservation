@@ -7,6 +7,7 @@ Usages
 1. gem build hotel\_reservation.gemspec
 2. gem install hotel\_reservation
 3. hotel\_reservation
+
 Press Ctrl + D to exit
 
 Design Principles
